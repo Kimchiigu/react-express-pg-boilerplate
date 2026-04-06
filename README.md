@@ -8,6 +8,18 @@ A simple full-stack task manager app with:
 
 ---
 
+## Clone this Repository
+
+```bash
+git clone https://github.com/Kimchiigu/react-express-pg-boilerplate.git
+```
+
+If you fork this repository, then change the username to your GitHub username
+
+```bash
+git clone https://github.com/<username>/react-express-pg-boilerplate.git
+```
+
 ## Prerequisites
 
 Make sure you have **Homebrew** installed. If not, run this in Terminal:
@@ -33,6 +45,13 @@ psql postgres
 
 If you see a `postgres=#` prompt, it's working. Type `\q` to exit.
 
+Notes:
+```bash
+\l # list all available database
+\c <database_name # connect to selected database
+\dt # list all available table (must connect to db first)
+```
+
 ---
 
 ## Step 2 — Create the Database
@@ -53,6 +72,9 @@ CREATE TABLE tasks (
   id SERIAL PRIMARY KEY,
   title TEXT NOT NULL
 );
+
+-- Optional (Add task manually)
+INSERT INTO tasks (title) VALUES ('Buy Milk'), ('Go to Gym');
 ```
 
 Type `\q` to exit.
